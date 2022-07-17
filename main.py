@@ -5,31 +5,31 @@ if choice == "HELP":
   helper = input("What command do you need help with? (USE NUMBER) : ")
   if helper == "1":
    print("generate text like \"||t||||h||||i||||s||\". For formatting issues you must type \">:<\" at the begining and end.")
-  if helper == "2":
+  elif helper == "2":
     print("Generate a wiggle copypasta using any phrase.")
-  if helper == "3":
+  elif helper == "3":
     print("G3N3R4T3 T3XT L1K3 TH15.")
-  if helper == "4":
+  elif helper == "4":
     print("Convert an image (path) to ASCII.")
-if choice == "1":
+elif choice == "1":
  orig = input("(begin text with \">:<\" and do NOT add a space after.)\nTEXT: ")
  spacefix_orig = orig.replace(" ", "<:>")
  spaced_spacefix = spacefix_orig.replace("", "||||")
  final = spaced_spacefix.replace("||<||||:||||>||", "||  ||")
  ffinal = final.replace("||||>||||:||||<||", "")
  print(ffinal)
-if choice == "2":
+elif choice == "2":
   wiggle = input("Wiggle: ")
   print(f"""
 {wiggle}\n  {wiggle}\n    {wiggle}\n        {wiggle}\n          {wiggle}\n            {wiggle}\n              {wiggle}\n                {wiggle}\n                  {wiggle}\n                    {wiggle}\n                      {wiggle}\n                        {wiggle}\n                         {wiggle}\n                           {wiggle}\n                             {wiggle}\n                           {wiggle}\n                         {wiggle}\n                        {wiggle}\n                      {wiggle}\n                    {wiggle}\n                  {wiggle}\n                {wiggle}\n              {wiggle}\n            {wiggle}\n          {wiggle}\n        {wiggle}\n      {wiggle}\n    {wiggle}\n  {wiggle}\n{wiggle}""")
-if choice == "3":
+elif choice == "3":
   normal=input("Translate text : ") 
   replacements=(('e','3'),('i','1'),('o','0'),('a','4'),('s','5'))
   new_string = normal
   for old, new in replacements:
     new_string = new_string.replace(old, new)
   print(new_string.upper())
-if choice == "4":
+elif choice == "4":
   img = Image.open(input(".img path: "))
   width, height = img.size
   aspect_ratio = height/width
